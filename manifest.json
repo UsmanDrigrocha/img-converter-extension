@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Img Converter",
+    "description": "Convert Image into any format",
+    "version": "0.0.1",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "downloads"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    }
+}
